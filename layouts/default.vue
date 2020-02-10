@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <nuxt />
   </div>
 </template>
@@ -18,3 +19,13 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 </style>
+
+<script>
+import Header from '@/components/Header'
+
+export default {
+  components: {
+    Header
+  }
+}
+</script>
