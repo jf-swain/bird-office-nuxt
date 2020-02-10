@@ -40,10 +40,13 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ['@nuxtjs/style-resources'],
   /*
    ** Build configuration
    */
+  styleResources: {
+    scss: ['./assets/styles/theme.scss']
+  },
   build: {
     /*
      ** You can extend webpack config here
