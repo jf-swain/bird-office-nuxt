@@ -8,7 +8,9 @@
       <img :src="require(`../assets/images/product/${product.image}`)" alt />
 
       <p class="product__description">
-        <span class="product__amount"> ${{ product.price }} </span>
+        <span class="product__amount">
+          ${{ product.price | currency('en-US') }}
+        </span>
 
         {{ product.title }}
       </p>

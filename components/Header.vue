@@ -4,16 +4,16 @@
       <img class="app-logo" src="@/assets/images/logo.svg" alt="Dewalt Logo" />
     </nuxt-link>
 
-    <!-- <app-shopping /> -->
+    <app-shopping />
   </header>
 </template>
 
 <script>
-// import Shopping from "./Shopping";
+import Shopping from './Shopping'
 
 export default {
   components: {
-    // appShopping: Shopping
+    appShopping: Shopping
   }
 }
 </script>
