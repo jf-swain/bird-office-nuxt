@@ -1,0 +1,92 @@
+////
+/// @group theme
+////
+
+/// Theme-font
+/// Manage font family in the project
+$theme-font: (
+  'default': (
+    name: 'circular-std-medium',
+    fallback: sans-serif,
+    download: (
+      link: '../assets/fonts/circular-std-medium/circular-std-medium'
+    )
+  ),
+  'default-bold': (
+    name: 'circular-std-bold',
+    fallback: sans-serif,
+    download: (
+      link: '../assets/fonts/circular-std-bold/circular-std-bold'
+    )
+  ),
+  'default-black': (
+    name: 'circular-std-black',
+    fallback: sans-serif,
+    download: (
+      link: '../assets/fonts/circular-std-black/circular-std-black'
+    )
+  ),
+  'default-book': (
+    name: 'circular-std-book',
+    fallback: sans-serif,
+    download: (
+      link: '../assets/fonts/circular-std-book/circular-std-book'
+    )
+  ),
+  'primary-light': (
+    name: 'sfuitext-light',
+    fallback: sans-serif,
+    download: (
+      link: '../assets/fonts/sfuitext-light/sfuitext-light'
+    )
+  ),
+  'primary-semibold': (
+    name: 'sfuitext-semibold',
+    fallback: sans-serif,
+    download: (
+      link: '../assets/fonts/sfuitext-semibold/sfuitext-semibold'
+    )
+  )
+);
+
+/// Theme-color
+/// Manage color in the project
+$theme-color: (
+  default: #373738,
+  primary: #484848,
+  secondary: #acacac,
+  border: #c3c3c3,
+  highlight: #febd17,
+  basic-white: #ffffff
+);
+
+/// Theme-breakpoint
+/// Manage breakpoint use in the project
+$theme-breakpoint: (
+  'beyond-medium': (
+    min: 768px
+  ),
+  'beyond-project': (
+    min: 1032px
+  )
+);
+
+/// Config-map
+/// Connect map project with sass-library
+/// @link http://sass-library.swain-creative.com/
+$config-map: (
+  'color': $theme-color,
+  'font': $theme-font,
+  'font-face': $theme-font,
+  'breakpoint': $theme-breakpoint
+);
+
+/// define root size for font and rem
+$root-size: 10;
+
+/// Define project wrapper
+$project-inner: 1032px;
+$project-mobile-padding: 1rem;
+
+/// import
+@import '~sass-library/import-v2.scss';
