@@ -1,10 +1,12 @@
 <template>
   <section>
     <shopping-order />
+
     <article>
-      <header>
-        <h2>Cart List</h2>
-      </header>
+      <p class="shopping-cart-empty">Your Shopping Cart is empty.</p>
+      <nuxt-link to="/" class="shopping-cart-empty-link">
+        Return to list of product
+      </nuxt-link>
     </article>
   </section>
 </template>
@@ -21,25 +23,25 @@ export default {
 
 <style lang="scss" scoped>
 section {
-  /* max-width: $project-inner; */
-  /* margin-left: auto; */
-  /* margin-right: auto; */
-  padding-left: $project-mobile-padding;
-  padding-right: $project-mobile-padding;
-
   @include breakpoint(1052) {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-h2 {
-  font-family: font-name('default-black');
-  font-size: rem(32);
-  margin-top: 4rem;
+.shopping-cart-empty {
+  color: color('secondary');
+  font-family: font-name('default-bold');
+  font-size: rem(28);
+  margin-top: 5rem;
+  text-align: center;
 
-  @include breakpoint('beyond-project') {
-    margin-top: 8.8rem;
+  &-link {
+    color: color('secondary');
+    display: block;
+    font-family: font-name('default-bold');
+    font-size: rem(14);
+    text-align: center;
   }
 }
 </style>
