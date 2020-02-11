@@ -24,7 +24,7 @@
     <button
       class="action__add"
       role="button"
-      @click="addProduct(price, quantity)"
+      @click="addProduct(id, quantity, price)"
     >
       Add to Cart
     </button>
@@ -37,6 +37,10 @@ export default {
     price: {
       type: Number,
       required: true
+    },
+    id: {
+      type: String,
+      required: true
     }
   },
   data() {
@@ -45,11 +49,13 @@ export default {
     }
   },
   methods: {
-    addProduct(price, quantity) {
+    addProduct(id, quantity, price) {
       const order = {
-        productPrice: price,
+        productId: id,
+        price,
         quantity
       }
+
       this.$store.dispatch('shopping/addProduct', order)
       this.quantity = 1
     },

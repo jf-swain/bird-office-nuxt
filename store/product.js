@@ -13,5 +13,8 @@ export const actions = {}
 export const getters = {
   products: (state) => {
     return state.products
+  },
+  getProductById: (state) => (id) => {
+    return state.products.find((product) => product.id === id)
   }
 }

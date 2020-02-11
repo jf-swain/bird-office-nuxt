@@ -18,10 +18,10 @@
 export default {
   computed: {
     shoppingCart() {
-      return this.$store.getters['shopping/getTotalPrice']
+      return this.$store.getters.getTotalPrice
     },
     shoppingQuantity() {
-      return this.$store.getters['shopping/getTotalQuantity']
+      return this.$store.getters.getTotalQuantity
     }
   }
 }

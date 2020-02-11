@@ -1,7 +1,7 @@
 <template>
   <aside>
     <div class="order-wrapper">
-      <div class="order order--active">
+      <div :class="['order', { 'order--active': step === 1 }]">
         <span class="order__number">1</span>
         <div>
           <p class="order__title">Shopping Cart</p>
@@ -13,7 +13,7 @@
         <img src="@/assets/images/chevron-icon.svg" alt="" />
       </div>
 
-      <div class="order">
+      <div :class="['order', { 'order--active': step === 2 }]">
         <span class="order__number">2</span>
         <div>
           <p class="order__title">Account & Payment</p>
@@ -25,7 +25,7 @@
         <img src="@/assets/images/chevron-icon.svg" alt="" />
       </div>
 
-      <div class="order">
+      <div :class="['order', { 'order--active': step === 3 }]">
         <span class="order__number">3</span>
         <div>
           <p class="order__title">Complete Order</p>
@@ -37,7 +37,15 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    step: {
+      type: Number,
+      required: false,
+      default: 1
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
