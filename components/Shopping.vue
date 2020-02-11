@@ -6,7 +6,9 @@
 
     <span v-if="shoppingQuantity === 0" class="shopping-cart__amount">0</span>
 
-    <p class="shopping-cart__name">shopping-cart</p>
+    <nuxt-link to="/cart">
+      <p class="shopping-cart__name">shopping-cart</p>
+    </nuxt-link>
 
     <img src="@/assets/images/shopping-cart-icon.svg" alt />
   </div>
@@ -16,10 +18,10 @@
 export default {
   computed: {
     shoppingCart() {
-      return this.$store.getters['shopping/getTotalPrice']
+      return this.$store.getters.getTotalPrice
     },
     shoppingQuantity() {
-      return this.$store.getters['shopping/getTotalQuantity']
+      return this.$store.getters.getTotalQuantity
     }
   }
 }
@@ -47,6 +49,10 @@ export default {
     @include breakpoint('beyond-medium') {
       margin-right: 0;
     }
+  }
+
+  a {
+    text-decoration: none;
   }
 
   &__name {

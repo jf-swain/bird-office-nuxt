@@ -13,7 +13,7 @@
         Prices valid till 31.10.2019, yearly adjustment for conversion rate to
         EURO
       </p>
-      <add-to-cart :price="product.price" />
+      <add-to-cart :id="product.id" :price="product.price" />
     </article>
 
     <aside
