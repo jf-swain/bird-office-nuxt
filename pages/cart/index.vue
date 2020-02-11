@@ -1,5 +1,6 @@
 <template>
   <section>
+    <shopping-order />
     <article>
       <header>
         <h2>Cart List</h2>
@@ -9,14 +10,20 @@
 </template>
 
 <script>
-export default {}
+import ShoppingOrder from '@/components/ShoppingOrder'
+
+export default {
+  components: {
+    ShoppingOrder
+  }
+}
 </script>
 
 <style lang="scss" scoped>
 section {
-  max-width: $project-inner;
-  margin-left: auto;
-  margin-right: auto;
+  /* max-width: $project-inner; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
   padding-left: $project-mobile-padding;
   padding-right: $project-mobile-padding;
 
