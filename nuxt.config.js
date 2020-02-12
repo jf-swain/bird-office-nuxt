@@ -27,7 +27,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~plugins/currency-filter.js'],
+  plugins: ['~plugins/currency-filter.js', '~plugins/modalBus'],
   /*
    ** Nuxt.js dev-modules
    */
