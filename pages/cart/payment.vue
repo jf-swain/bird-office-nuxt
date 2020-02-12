@@ -29,7 +29,7 @@
         </form>
       </article>
     </section>
-    <nuxt-link to="/cart/finish">Continue</nuxt-link>
+    <nuxt-link to="/cart/complete">Continue</nuxt-link>
     <login-modal :is-open="isOpen" />
   </div>
 </template>
