@@ -11,17 +11,35 @@
     </nuxt-link>
 
     <img src="@/assets/images/shopping-cart-icon.svg" alt />
+
+    <ui-button v-if="isLogged" class="ui-button-margin" @click="onLogout"
+      >Log out</ui-button
+    >
   </div>
 </template>
 
 <script>
+import UiButton from '@/components/UI/UiButton'
+
 export default {
+  components: {
+    UiButton
+  },
+  middleware: 'check-auth',
   computed: {
     shoppingCart() {
       return this.$store.getters.getTotalPrice
     },
     shoppingQuantity() {
       return this.$store.getters.getTotalQuantity
+    },
+    isLogged() {
+      return this.$store.getters['user/isAuthenticated']
+    }
+  },
+  methods: {
+    onLogout() {
+      this.$store.dispatch('user/logout')
     }
   }
 }
@@ -66,5 +84,9 @@ export default {
       display: block;
     }
   }
+}
+
+.ui-button-margin {
+  margin-left: 2rem;
 }
 </style>
