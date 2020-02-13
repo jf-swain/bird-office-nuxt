@@ -88,3 +88,15 @@ sw.*
 
 # Vim swap files
 *.swp
+
+
+# test output
+tests_output
+tests/endToEnd/screenshots/
+
+# test artillery
+test_report.json
+test_report.json.html
+
+# test backstop
+backstop_data
