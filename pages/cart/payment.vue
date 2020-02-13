@@ -22,14 +22,14 @@
           <p>Choose how do you want to pay your order</p>
         </header>
 
-        <form>
-          <input v-model="cardNumber" type="number" />
-          <input v-model="cardExpiration" type="date" />
-          <input v-model="cardCVV" type="number" />
-        </form>
+        <payment-card />
       </article>
     </section>
-    <nuxt-link to="/cart/finish">Continue</nuxt-link>
+
+    <nuxt-link v-if="getCardInfos" to="/cart/complete" class="continue-button"
+      ><ui-button>Continue</ui-button></nuxt-link
+    >
+
     <login-modal :is-open="isOpen" />
   </div>
 </template>
@@ -38,10 +38,12 @@
 import ShoppingOrder from '@/components/ShoppingOrder'
 import UiButton from '@/components/UI/UiButton'
 import LoginModal from '@/components/LoginModal'
+import PaymentCard from '@/components/PaymentCard'
 
 export default {
   components: {
     ShoppingOrder,
+    PaymentCard,
     UiButton,
     LoginModal
   },
@@ -57,10 +59,13 @@ export default {
       isOpen: false
     }
   },
-  middleware: 'shipping',
+  middleware: ['shipping', 'check-auth'],
   computed: {
     isLogged() {
       return this.$store.getters['user/isAuthenticated']
+    },
+    getCardInfos() {
+      return this.$store.getters['payment/getCardInfos']
     }
   },
   created() {
@@ -103,5 +108,12 @@ p {
   font-family: font-name('default');
   font-size: rem(14);
   color: color('highlight');
+}
+
+.continue-button {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 </style>

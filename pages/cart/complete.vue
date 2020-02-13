@@ -11,7 +11,7 @@ export default {
   components: {
     ShoppingOrder
   },
-  middleware: ['check-auth', 'auth']
+  middleware: ['check-auth', 'auth', 'shipping']
 }
 </script>
 
