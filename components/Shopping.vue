@@ -1,7 +1,7 @@
 <template>
   <div class="shopping-cart">
     <span v-if="shoppingQuantity != 0" class="shopping-cart__amount">
-      {{ shoppingQuantity }} items · ${{ shoppingCart | currency('en-US') }}
+      {{ shoppingQuantity }} items · $ {{ shoppingCart | currency('en-US') }}
     </span>
 
     <span v-if="shoppingQuantity === 0" class="shopping-cart__amount">0</span>
@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .shopping-cart {
   align-items: center;
   border-left: 0.5px solid color('border');

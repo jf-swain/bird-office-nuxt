@@ -88,3 +88,8 @@ sw.*
 
 # Vim swap files
 *.swp
+
+
+# test output
+tests_output
+tests/endToEnd/screenshots/
