@@ -13,5 +13,5 @@ before_script:
   - npm run serve:dist &
 
 script:
-  - nightwatch --config nightwatch.js
+  - nightwatch
   - pkill node
