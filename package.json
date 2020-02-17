@@ -11,7 +11,7 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test-nightwatch": "./node_modules/.bin/nightwatch",
-    "test-jest": "./node_modules/jest/bin/jest.js",
+    "test": "./node_modules/jest/bin/jest.js",
     "test-artillery": "./node_modules/artillery/bin/artillery run -o test_report.json artillery.yml && ./node_modules/artillery/bin/artillery report test_report.json",
     "test-backstop": "./node_modules/backstopjs/cli/index.js test",
     "test-backstop-approve": "./node_modules/backstopjs/cli/index.js approve"
