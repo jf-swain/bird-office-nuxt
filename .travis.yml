@@ -13,5 +13,5 @@ before_script:
   - npm run serve:dist &
 
 script:
-  - nightwatch
+  - nightwatch tests/endToEnd/default.js
   - pkill node
