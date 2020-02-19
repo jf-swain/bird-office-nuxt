@@ -1,17 +1,16 @@
-addons:
-  sauce_connect: true
-
 language: node_js
 
 node_js:
   - 12
 
-install:
-  - npm install -g nightwatch
+services:
+  - xvfb
 
-before_script:
-  - npm run serve:dist &
+addons:
+  chrome: stable
+
+before-install:
+  - google-chrome-stable
 
 script:
-  - nightwatch --config nightwatch.json
-  - pkill node
+  - xvfb-run yarn test
