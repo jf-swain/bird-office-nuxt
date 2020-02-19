@@ -16,6 +16,12 @@ module.exports = {
         on_error: true,
         path: 'tests/endToEnd/screenshots/'
       }
+    },
+    desiredCapabilities: {
+      browserName: 'chrome',
+      chromeOptions: {
+        args: ['--headless']
+      }
     }
   }
 }
