@@ -11,8 +11,8 @@ addons:
   chrome: stable
 
 before-install:
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=3000 http://localhost &
 
 script:
   - yarn run dev
-  # - xvfb-run npm test
+  - xvfb-run npm test
