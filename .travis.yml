@@ -6,6 +6,7 @@ node_js:
 services:
   - xvfb
 
+dist: trusty
 addons:
   chrome: stable
 
@@ -13,4 +14,4 @@ before-install:
   - google-chrome-stable --headless --disable-gpu
 
 script:
-  - xvfb-run yarn test
+  - xvfb-run npm test
