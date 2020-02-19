@@ -1,6 +1,5 @@
 module.exports = {
   src_folders: ['tests/endToEnd'],
-  page_objects_path: ['page-objects'],
 
   webdriver: {
     start_process: true,
