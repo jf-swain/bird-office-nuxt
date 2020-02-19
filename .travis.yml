@@ -11,7 +11,7 @@ addons:
   chrome: stable
 
 before-install:
-  - google-chrome-stable --headless --no-sandbox --no-default-browser-check --no-first-run --disable-default-apps --disable-gpu --remote-debugging-port=9222 http://localhost &
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 
 script:
   - xvfb-run npm test
