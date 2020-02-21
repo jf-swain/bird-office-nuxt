@@ -11,7 +11,8 @@ addons:
   chrome: stable
 
 before-install:
-  - yarn
+  - yarn run dev
+  - sleep 5
 
 script:
   - npm test
