@@ -3,16 +3,15 @@ language: node_js
 node_js:
   - 12
 
-services:
-  - xvfb
+# services:
+#   - xvfb
 
-dist: trusty
-addons:
-  chrome: stable
+# dist: trusty
+# addons:
+#   chrome: stable
 
-before-install:
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+# before-install:
+#   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 
 script:
-  - yarn run dev
-  - xvfb-run npm test
+  - npm test
