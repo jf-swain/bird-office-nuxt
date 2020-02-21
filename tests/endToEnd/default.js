@@ -3,7 +3,7 @@ let amount
 module.exports = {
   'Testing - Add random product to cart header'(browser) {
     browser
-      .url('http://localhost:9515/')
+      .url('http://localhost:3000/')
       .waitForElementVisible('body')
       .assert.visible('.home-content')
       .elements('css selector', '.home-content a', (res) => {
