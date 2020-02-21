@@ -4,7 +4,7 @@ module.exports = {
   webdriver: {
     start_process: true,
     server_path: 'node_modules/.bin/chromedriver',
-    port: 3000
+    port: 9515
   },
 
   test_settings: {
