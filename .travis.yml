@@ -4,8 +4,8 @@ language: node_js
 node_js:
   - 12
 
-# services:
-#   - xvfb
+services:
+  - xvfb
 
 # dist: trusty
 addons:
