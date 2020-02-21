@@ -7,8 +7,8 @@ node_js:
 #   - xvfb
 
 # dist: trusty
-# addons:
-#   chrome: stable
+addons:
+  chrome: stable
 
 # before-install:
 #   - 'export DISPLAY=:99.0'
