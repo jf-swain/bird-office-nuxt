@@ -1,3 +1,6 @@
+<p align="center">
+<a href="https://codecov.io/gh/jf-swain/bird-office-nuxt"><img src="https://badgen.net/codecov/c/jf-swain/bird-office-nuxt/connect-travis" alt="Coverage Status"></a>
+</p>
 # bird-office-nuxt
 
 > My swell Nuxt.js project
