@@ -15,9 +15,8 @@ node_js:
 #   - 'sudo chown root /opt/google/chrome/chrome-sandbox'
 #   - 'sudo chmod 4755 /opt/google/chrome/chrome-sandbox'
 #   - npm run dev &
+install:
+  - npm install -g codecov
 
 script:
-  - npm test
-
-after_success:
-  - bash < (curl -s https://codecov.io/bash)
+  - npm test && codecov
