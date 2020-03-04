@@ -13,7 +13,6 @@ addons:
 before-install:
   - 'sudo chown root /opt/google/chrome/chrome-sandbox'
   - 'sudo chmod 4755 /opt/google/chrome/chrome-sandbox'
-  - yarn run dev &
 
 script:
   - yarn run test
