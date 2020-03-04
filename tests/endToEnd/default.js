@@ -5,7 +5,7 @@ module.exports = {
     browser
       .url('http://localhost:3000/')
       .waitForElementVisible('body')
-      .assert.visible('.home-content')
+      .waitForElementVisible('.home-content')
       .elements('css selector', '.home-content a', (res) => {
         const numproduct = res.value.length
         const randomProduct = Math.floor(Math.random() * numproduct)

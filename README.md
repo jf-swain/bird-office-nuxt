@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jf-swain/bird-office-nuxt.svg?branch=master)](https://travis-ci.org/jf-swain/bird-office-nuxt)
+
 # bird-office-nuxt
 
 > My swell Nuxt.js project
