@@ -3,15 +3,15 @@ language: node_js
 node_js:
   - 12
 
-# services:
-#   - xvfb
+services:
+  - xvfb
 
-# addons:
-  # chrome: stable
+addons:
+  chrome: stable
 
 before-install:
-  # - 'sudo chown root /opt/google/chrome/chrome-sandbox'
-  # - 'sudo chmod 4755 /opt/google/chrome/chrome-sandbox'
+  - 'sudo chown root /opt/google/chrome/chrome-sandbox'
+  - 'sudo chmod 4755 /opt/google/chrome/chrome-sandbox'
   - "npm run dev &"
   - "sleep 15"
 
