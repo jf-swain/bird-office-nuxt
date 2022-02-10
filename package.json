@@ -31,7 +31,7 @@
     "jest-serializer-vue": "^2.0.2",
     "js-cookie": "^2.2.1",
     "nightwatch": "^1.3.4",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.0.0",
     "sass-library": "https://github.com/jf-swain/sass-library",
